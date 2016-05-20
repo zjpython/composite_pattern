@@ -7,7 +7,7 @@ def add(self, first, *items):
         self.children.extend(items)
  ```
     这里的first不能去除，因为假如去除的话，items所捕获的元素数量可能为0，虽然无害，但却会把用户在代码中所犯的逻辑错误掩盖掉。
-
+------
 ```python
 def add(self, first, *items):
 	self.children.extend(itertools.chain((first,), items))
